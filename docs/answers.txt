@@ -1,0 +1,83 @@
+Git Lab Tutorials completed on 10/09/2022
+Git account setup: 9/04/2018
+Repository Link: https://github.com/ftgoktas/assignment2
+
+1) $ git push origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 755 bytes | 377.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/ftgoktas/assignment2.git
+   f4975e5..3b9a6ec  master -> master
+
+2) 9 commits 
+git rev-list --all --count
+
+
+3) $ git log -1 ./README.md
+commit 992da4e25f8a70faa9c90572dc347a92c757c383
+Author: Furkan T. Goktas <goktas@cs.fsu.edu>
+Date:   Fri Oct 14 02:22:24 2022 -0400
+
+    Repository owner information added to README.md
+
+4) Mention two reasons why branches are used in a Git repository
+- To work on a new project feature without affecting the master branch
+- To isolate the current working version from the master branch while developers work in parallel.
+
+5) What is the difference between git log and git status?
+- git status gives information about the current working directory, 
+whereas git log displays the commit history for your branch.
+
+6) What command would you use to see the commits where “Vehicle.h” was one of the committed files?
+git log Vehicle.h
+
+7) What command would you use to see the commits whose commit message contains the word “file”?
+git log --all --grep='file'
+
+8) In the context of object-oriented programming,
+(I) What is inheritance? 
+Inheritance is a feature or a process in which, new classes are created from the existing classes. 
+The new class created is called “derived class” or “child class” and the existing class is known as the “base class” or “parent class”. 
+It allows subclasses to re-use code in the base class. 
+
+(II) What is polymorphism? 
+Polymorphism allows you to define one interface and have multiple implementations. 
+It allows you to access objects of different types through the same interface. 
+Each type can provide its own independent implementation of this interface.
+
+(III) What is encapsulation?
+Encapsulation is a process of wrapping similar code in one place. 
+It allows bundling data members and functions that operate together inside a single class.
+
+
+9) What is the main difference between the “Dictator and Lieutenants” workflow and the “Integration manager” workflow?
+
+“Dictator and Lieutenants” workflow allows collaborators work on their topic branch.
+Lieutenants merge the Collaborators' topic branches into their master branch.
+The Dictator merges the Lieutenants' master branches into the Dictator’s master branch.
+Finally, the Dictator pushes that master branch to the main repository so the other Collaborators can rebase on it.
+
+Whereas, in the “Integration manager” workflow, developers have their own private and public repositories, 
+this is where integration manager pulls the code directly from and pushes to the main repository. 
+
+
+10) The team of 100 developers can benefit from the “Dictator and Lieutenants” workflow instead of the “Centralized” workflow 
+since the "Centralized" workflow requires developers to pull from the main repo,
+and push any changes to the main repository after resolving all the conflicts. This would only work for smaller teams.
+“Dictator and Lieutenants” workflow allows large teams to work their own individual branches and lieutenants need to approve 
+their changes before merging and send to the dictator's repository. Therefore, this workflow is more convenient for huge projects 
+with hundreds of collaborators.
+
+
+
+
+
+
+
+
+
+
